@@ -1,0 +1,13 @@
+# playbooks/ping.yml
+
+#ansible-playbook playbooks/ping.yml -i inventory/
+
+# playbooks/ping.yml
+- name: Ping all swarm hosts
+  hosts: proxmox
+  gather_facts: no
+
+  tasks:
+    - name: Ping the host
+      ansible.builtin.ping:
+
